@@ -40,6 +40,7 @@
     font-size: 2.5em;
     color: white;
     text-shadow: 2px 2px black;
+    font-weight: 900;
 }
 
 body {
@@ -423,6 +424,9 @@ fieldset {
 /* About Us */
 #about{
   background: white;
+}
+.about-us span {
+    font-style: italic;
 }
 
 .about-us {
@@ -828,12 +832,21 @@ fieldset {
 
 /* Footer */
 
-.footer-section {
-    margin-top: -200px;
+.footer-section{
+  margin-top: -200px;
 
-    background-image: linear-gradient(-45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
-    background-size: 4px 4px;
-    box-shadow: 0px -5px 10px black
+  background-image: linear-gradient(-45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
+  background-size: 4px 4px;
+  box-shadow: 0px -5px 10px black
+}
+.footer-section-white {
+
+  background-image: linear-gradient(-45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
+  background-size: 4px 4px;
+  box-shadow: 0px -5px 10px black
+}
+.footer-section-white .column-one {
+	padding: 90px 90px;
 }
 
 .footer-section .column-one {
@@ -1351,4 +1364,49 @@ fieldset {
 .uipasta-credit a {
     color: #72e5ff;
     font-weight: 600;
+}
+
+/* taxer */
+
+.taxer{
+  display: flex;
+  justify-content: center;
+}
+
+.gross-radio,
+.price-textbox,
+.vat-textbox
+{
+  padding: 0px 20px;
+  display: flex;
+justify-content: center;
+flex-direction: column;
+height: 100px;
+}
+
+.vat-textbox input{
+  width:80px;
+}
+.final-value{
+  padding: 0px 20px;
+  display: flex;
+justify-content: center;
+flex-direction: column;
+height: 100px;
+width: 190px;
+}
+
+.final-value span{
+  font-style: normal;
+}
+.col-tax{
+  margin: 0 auto;
+  width:720px;
+}
+
+.about-us button{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
