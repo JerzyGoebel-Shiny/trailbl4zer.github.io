@@ -7,9 +7,6 @@ document.getElementsByName("price")[0].value = "";
 
 /* Handler */
 
-
-document.getElementsByName("price")[0].value = "";
-
 function initCalc(){
 getValues();
 setFinalValue(calculateTax(price, vat, gross));
