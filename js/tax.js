@@ -42,9 +42,3 @@ function calculateTax(value, tax, isGross){
 function setFinalValue(finalPrice){
   document.getElementById("final").innerHTML = finalPrice + " PLN";
 }
-
-/* IE radio failsafe */
-
-function setFinalValue(finalPrice){
-  document.getElementById("final").innerHTML = finalPrice + " PLN";
-}
