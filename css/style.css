@@ -319,8 +319,7 @@ fieldset {
 
 .navigation-menu .navbar-nav li a {
     color: #ffffff;
-    text-transform: uppercase;
-    font-family: 'Saira Semi Condensed', sans-serif;
+    font-family: 'Saira', sans-serif;
     font-size: 15px;
     letter-spacing: 1px;
     padding: 30px 15px;
@@ -394,6 +393,31 @@ fieldset {
 
 /* Home Section */
 
+.home-head{
+  display: flex;
+  justify-content: center;
+  padding: 100px 0px 0px 0px;
+}
+.avatar-head,
+.title-head{
+  padding: 0px 20px;
+  display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.avatar-head img {
+    border-radius: 50%;
+    border: 5px white solid;
+    height: 200px;
+    width: 200px;
+
+}
+.avatar-head{
+  overflow: hidden;
+}
+
+
 .home-section-background {
 	padding: 95px 0px;
     background-color: #383838;
@@ -405,7 +429,6 @@ fieldset {
 	font-size: 60px;
 	color: #ffffff;
 	font-weight: 700;
-	text-transform: uppercase;
 	text-align: center;
     margin-top: 13%;
     text-shadow: 3px 3px black;
@@ -454,35 +477,39 @@ fieldset {
   background-color: #383838;
 }
 
-.services-section hr {
-
+.services-section hr,
+.interests hr {
   width: 42px;
   margin-left: 0px;
 }
 
-.services-section .services-detail {
+.services-section .services-detail,
+.interests .interests-detail {
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
   position: relative;
   top: 0px;
   padding: 60px 40px 60px 40px;
   margin-top: 32px;
+  height: 337.5px;
 }
 
-.services-section .services-detail:hover {
+.services-section .services-detail:hover,
+.interests .interests-detail:hover {
   box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
   top: -5px;
   background-color: #ffffff;
 }
 
-.services-section .services-detail .fa {
+.services-section .services-detail .fa{
   font-size: 60px;
   color: #ffffff;
   margin-bottom: 13px;
 }
 
-.services-section .services-detail:hover .fa {
-  color: #fd2034;
+.services-section .services-detail:hover .fa,
+.interests .interests-detail:hover .fa {
+  color: #72e5ff;
 }
 
 .services-detail h5 {
@@ -505,6 +532,20 @@ fieldset {
 }
 
 
+/* Interests */
+.interests {
+  background-color: #FFFFFF;
+}
+.interests .interests-detail .fa {
+  font-size: 60px;
+  color: #383838;
+  margin-bottom: 13px;
+}
+.interests h5 {
+   color: #000000;
+   font-size: 25px;
+   font-family: 'Saira Semi Condensed', sans-serif;
+}
 
 /* CountDown Timer */
 
@@ -832,6 +873,11 @@ fieldset {
 
 /* Footer */
 
+.footer-helper {
+    background-color: #383838;
+}
+
+
 .footer-section{
   margin-top: -200px;
 
@@ -872,7 +918,7 @@ fieldset {
     bottom: 0px;
     z-index: 999;
     transition: all 0.3s ease-in-out;
-    background-color: #fd2034;
+    background-color: #72e5ff;
     width: 50px;
     height: 50px;
     line-height: 52px;
