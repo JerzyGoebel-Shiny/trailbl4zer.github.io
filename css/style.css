@@ -389,6 +389,14 @@ fieldset {
     color: #fff;
 }
 
+.dropdown-content .smoth-scroll:after {
+  width: 0 !important;
+}
+
+.dropbtn:after{
+  width: 0 !important;
+}
+
 
 
 /* Home Section */
@@ -1455,4 +1463,55 @@ width: 190px;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+}
+
+/* Dropdown */
+
+.dropbtn {
+    margin-top:-2px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    transition: 200ms;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    position: relative;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #383838;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #72e5ff !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover{
+    background-color: #72e5ff;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: #72e5ff;
 }
