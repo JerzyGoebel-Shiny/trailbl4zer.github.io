@@ -67,17 +67,17 @@
                 <div class="taxer">
                   <div class="price-textbox">
                     <p>Value:<p>
-                    <input type="number" step="0.01" name="price" oninput="initCalc()" value="">
+                    <input type="number" step="0.01" id="price" value="">
                   </div>
                   <div class="gross-radio">
-                    <form action="">
-                      <input type="radio" name="gross" onchange="initCalc()" value="gross" > Gross<br>
-                      <input type="radio" name="gross" onchange="initCalc()" value="net" checked="true"> Net<br>
-                    </form>
+                    <div class="gross-helper">
+                      <input type="radio" name="radio_gross" id="gross" onchange="initCalc()" value="gross" > Gross<br>
+                      <input type="radio" name="radio_gross" id="gross" onchange="initCalc()" value="net" checked="true"> Net<br>
+                    </div>
                   </div>
                   <div class="vat-textbox">
                     <p>TAX level:<p>
-                    <input type="number" step="1" name="vat" oninput="initCalc()" value="23" min="1" max="23">
+                    <input type="number" step="1" id="vat" oninput="initCalc()" value="23" min="1" max="23">
                   </div>
                   <div class="final-value">
                     <p>Total:<p>

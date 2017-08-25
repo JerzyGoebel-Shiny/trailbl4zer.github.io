@@ -1,9 +1,25 @@
 
 var price, vat, gross;
+var priceField, vatField, grossRadio;
+
+priceField = document.getElementById("price");
+vatField = document.getElementById("vat");
+grossRadio = document.getElementById("gross");
+
+
+/* Add Event Listener to elements */
+
+priceField.addEventListener("change", initCalc, false);
+priceField.addEventListener("keyup", initCalc, false);
+vatField.addEventListener("change", initCalc, false);
+vatField.addEventListener("keyup", initCalc, false);
+grossRadio.addEventListener("change", initCalc, false);
+
+
 
 /* Wipe textfields on page load/refresh */
 
-document.getElementsByName("price")[0].value = "";
+priceField.value = "";
 
 /* Handler */
 
@@ -16,9 +32,9 @@ setFinalValue(calculateTax(price, vat, gross));
 
 
 function getValues(){
-  price = document.getElementsByName("price")[0].value;
-  vat = document.getElementsByName("vat")[0].value;
-  gross = document.getElementsByName("gross")[0].checked;
+  price = priceField.value;
+  vat = vatField.value;
+  gross = grossRadio.checked;
 
 }
 
@@ -41,4 +57,25 @@ function calculateTax(value, tax, isGross){
 
 function setFinalValue(finalPrice){
   document.getElementById("final").innerHTML = finalPrice + " PLN";
+}
+
+
+/* Calculator Class */
+
+class TaxCalculator{
+    constructor(tax, gross){
+      this.tax = tax;
+      this.gross = gross;
+    }
+    calculate(price){
+      let final;
+      if (this.gross = "GROSS"){
+        final = 100 * parseFloat(price) / (100 + parseFloat(this.tax));
+      }else if(this.gross = "NET") {
+        final = (100 + parseFloat(this.tax)) * parseFloat(price) / 100;
+      }else{
+        return "gross value must be either \"GROSS\" or \"NET\".";
+      }
+      return final.toFixed(2);
+    }
 }
